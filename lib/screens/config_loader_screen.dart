@@ -61,10 +61,21 @@ class _ConfigLoaderScreenState extends State<ConfigLoaderScreen> {
 
   void _submitManualUrl() {
     final url = _manualUrlController.text.trim();
-    if (url.isNotEmpty) {
-      _baseUrl = url;
-      _navigateToNext();
+    if (url.isEmpty) return;
+    
+    // Prevent user from imputing Gist URL here
+    if (url.contains('gist.github')) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('SALAH! Masukkan URL Ngrok (API), BUKAN URL Gist!'),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return;
     }
+
+    _baseUrl = url;
+    _navigateToNext();
   }
 
   @override

@@ -5,7 +5,7 @@ class GistService {
   // IMPORTANT: Replace this with the ACTUAL RAW URL of your Gist after you create it.
   // This is a placeholder as per the TOR instructions to hardcode the Raw URL.
   // Example: https://gist.githubusercontent.com/username/gist_id/raw/config.json
-  static const String _gistRawUrl = 'https://gist.githubusercontent.com/anjarhidayat123/e726ac0d22edfe7c4322ddb46dad836e/raw/551de1811325937c54514935305931f36b13c7b6/config.jsonE'; 
+  static const String _gistRawUrl = 'https://gist.githubusercontent.com/anjarhidayat123/e726ac0d22edfe7c4322ddb46dad836e/raw/551de1811325937c54514935305931f36b13c7b6/config.json'; 
 
   Future<String> getBaseUrl() async {
     if (_gistRawUrl == 'https://gist.githubusercontent.com/anjarhidayat123/e726ac0d22edfe7c4322ddb46dad836e/raw/551de1811325937c54514935305931f36b13c7b6/config.jsonE') {
